@@ -1,7 +1,18 @@
 [package]
-org = "rajinthan"
-name = "mssql_ballerina"
-version = "0.1.0"
+org = "ballerinax"
+name = "mssql"
+version = "@toml.version@"
 
-[build-options]
-observabilityIncluded = true
+[[dependency]]
+org = "ballerina"
+name = "sql"
+version = "@stdlib.sql.version@"
+
+[[dependency]]
+org = "ballerina"
+name = "crypto"
+version = "@stdlib.crypto.version@"
+
+
+
+    
