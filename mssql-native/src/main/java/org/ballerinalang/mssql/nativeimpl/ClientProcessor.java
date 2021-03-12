@@ -22,7 +22,7 @@ import io.ballerina.runtime.api.values.BMap;
 import io.ballerina.runtime.api.values.BObject;
 import io.ballerina.runtime.api.values.BString;
 import org.ballerinalang.mssql.Constants;
-import org.ballerinalang.mssql.Utils;
+import org.ballerinalang.mssql.utils.Utils;
 import org.ballerinalang.sql.datasource.SQLDatasource;
 
 import java.util.Properties;
