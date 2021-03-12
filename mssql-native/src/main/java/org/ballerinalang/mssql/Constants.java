@@ -101,6 +101,26 @@ public final class Constants {
 
     }
 
+    public static final class Geometric{
+        public static final String X = "x";
+        public static final String Y = "y";
+    }
+
+    public static final class CustomTypeNames {
+        public static final String POINT = "PointValue";
+    }
+
+    public static final class CustomTypes {
+        public static final String POINT = "point";
+    }
+
+    /**
+     * Constants for the Value field in Custom datatypes.
+     */
+    public static final class TypedValueFields {
+        public static final BString VALUE = fromString("value");
+    }
+
     public static final String MSSQL_DATASOURCE_NAME = "com.microsoft.sqlserver.jdbc.SQLServerXADataSource";
     public static final String MSSQL_XA_DATASOURCE_NAME = "com.microsoft.sqlserver.jdbc.SQLServerXADataSource";
     static final String FILE = "file:";

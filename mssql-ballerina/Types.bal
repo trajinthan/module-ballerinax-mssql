@@ -14,9 +14,9 @@
 // // specific language governing permissions and limitations
 // // under the License.
 
-// import ballerina/time;
-// import ballerina/jballerina.java;
-// import ballerina/sql;
+import ballerina/time;
+import ballerina/jballerina.java;
+import ballerina/sql;
 
 // # Represents Date SQL field.
 // #
@@ -41,3 +41,37 @@
 //         'class: "org.ballerinalang.mssql.ProcedureCallResultUtils"
 //     } external;
 // }
+
+## Represents Point MsSQL Field
+public class PointValue {
+    public PointRecordType | string? value;
+
+    public function init(PointRecordType | string? value = ()) {
+        self.value =value;
+    }
+}
+
+# Represents LineString MsSQL Field
+// public class LineStringValue {
+//     public LineStringRecordType|string? value;
+
+//     public function init(LineStringRecordType | string? value = ()) {
+//         self.value = value;
+//     }  
+// }
+
+# Represents CircularString MsSQL Field
+// public class CircularStringValue {
+//     public CircularStringRecordType|string? value;
+
+//     public function init(CircularStringRecordType | string? value = ()) {
+//         self.value = value;
+//     }  
+// }
+
+
+public type PointRecordType record {
+    decimal x;
+    decimal y;
+};
+
