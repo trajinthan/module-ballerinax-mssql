@@ -3,26 +3,29 @@ import ballerina/sql;
 
 public function initTestScripts() {
     _ = createDatabases();
-    _ = basicExcuteInitDB();
-    _ = initPool();
-    _ = connectionInitDb();
-    _ = executeParamsInitDB();
+    // _ = basicExcuteInitDB();
+    // _ = initPool();
+    // _ = connectionInitDb();
+    // _ = executeParamsInitDB();
     _ = simpleQueryInitDB();
+    _ = proceduresInitDB(); 
 }
 
 public function createDatabases() {
-    _ = createQuery(`DROP DATABASE IF EXISTS CONNECT_DB`);
-    _ = createQuery(`CREATE DATABASE CONNECT_DB`);
-    _ = createQuery(`DROP DATABASE IF EXISTS POOL_DB_1`);
-    _ = createQuery(`CREATE DATABASE POOL_DB_1`);
-    _ = createQuery(`DROP DATABASE IF EXISTS POOL_DB_2`);
-    _ = createQuery(`CREATE DATABASE POOL_DB_2`);
-    _ = createQuery(`DROP DATABASE IF EXISTS EXECUTE_DB`);
-    _ = createQuery(`CREATE DATABASE EXECUTE_DB`);
-    _ = createQuery(`DROP DATABASE IF EXISTS EXECUTE_PARAMS_DB`);
-    _ = createQuery(`CREATE DATABASE EXECUTE_PARAMS_DB`);
+    // _ = createQuery(`DROP DATABASE IF EXISTS CONNECT_DB`);
+    // _ = createQuery(`CREATE DATABASE CONNECT_DB`);
+    // _ = createQuery(`DROP DATABASE IF EXISTS POOL_DB_1`);
+    // _ = createQuery(`CREATE DATABASE POOL_DB_1`);
+    // _ = createQuery(`DROP DATABASE IF EXISTS POOL_DB_2`);
+    // _ = createQuery(`CREATE DATABASE POOL_DB_2`);
+    // _ = createQuery(`DROP DATABASE IF EXISTS EXECUTE_DB`);
+    // _ = createQuery(`CREATE DATABASE EXECUTE_DB`);
+    // _ = createQuery(`DROP DATABASE IF EXISTS EXECUTE_PARAMS_DB`);
+    // _ = createQuery(`CREATE DATABASE EXECUTE_PARAMS_DB`);
     _ = createQuery(`DROP DATABASE IF EXISTS SIMPLE_PARAMS_QUERY_DB`);
     _ = createQuery(`CREATE DATABASE SIMPLE_PARAMS_QUERY_DB`);
+    _ = createQuery(`DROP DATABASE IF EXISTS PROCEDURES_DB`);
+    _ = createQuery(`CREATE DATABASE PROCEDURES_DB`);
 }
 
 public function connectionInitDb() {
@@ -259,6 +262,14 @@ public function simpleQueryInitDB() {
     _ = executeQuery("simple_params_query_db", query);
 }  
 
+public function proceduresInitDB() {
+    sql:ParameterizedQuery query = 
+    `
+    
+    `;
+
+    _ = executeQuery("procedures_db", query);
+}
 
 public function createQuery(sql:ParameterizedQuery query) {
 
